@@ -1,0 +1,41 @@
+<div class="stage-img"><img src="uploads/fce/{stage_background_image}" title="" alt="<f:format.raw>{stage_background_title}</f:format.raw>" /></div>
+
+<div class="product left">
+	<a href="#" title="" data-content="{left_product_tooltip}">
+		<img src="uploads/fce/{left_product_image}" alt="<f:format.raw>{left_product_title}</f:format.raw>" />
+	</a>
+</div>
+
+<div id="product-animation" class="product animation"></div>
+
+<div class="product right">
+	<a href="#" title="" data-content="{right_product_tooltip}">
+		<img src="uploads/fce/{right_product_image}" alt="<f:format.raw>{right_product_title}</f:format.raw>" />
+	</a>
+</div>
+
+
+<script type="text/javascript">
+	<![CDATA[
+	jQuery(function($) {
+		if($.isDevice(['not-mobile','not-tablet-portrait'])) {
+			$('.product a').popover({
+				content: 'Default Content',
+				delay: { show: 300, hide: 100 },
+				placement: 'top',
+				trigger: 'hover'
+			});
+		}
+		]]>
+		<f:if condition="{enable_animation}">
+			<![CDATA[$('#product-animation').enkeyProductAnimation({
+			]]>
+				numListItems: {animation_num_list_items},
+				animationSpeed: {animation_speed},
+				animationPause: {animation_pause}
+			<![CDATA[
+			});
+		]]>
+		</f:if>
+	});
+</script>

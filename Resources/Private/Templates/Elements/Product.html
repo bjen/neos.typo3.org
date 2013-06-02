@@ -1,0 +1,35 @@
+<div class="product-order-item">
+	<ul class="row">
+		<li class="product-order-product span6">
+			<f:if condition="{image}">
+				<f:image src="uploads/fce/{image}" width="135c" height="135c" alt="{header}" additionalAttributes='{class: "product-order-image"}' />
+			</f:if>
+			<div class="product-order-description">
+				<f:if condition="{header}">
+					<h4>{header}</h4>
+				</f:if>
+				<f:if condition="{description}">
+					<p>
+						<f:format.nl2br>{description}</f:format.nl2br>
+					</p>
+				</f:if>
+				<f:if condition="{article_no}">
+					<p class="visible-phone"><strong>Artikelnummer:</strong> {article_no}</p>
+				</f:if>
+				<f:if condition="{price}">
+					<p class="visible-phone"><strong>Preis inkl. MwSt:</strong> {price}</p>
+				</f:if>
+			</div>
+		</li>
+		<li class="product-order-article-no span3 hidden-phone">
+			<f:if condition="{article_no}">
+				{article_no}
+			</f:if>
+		</li>
+		<li class="product-order-price span3 hidden-phone">
+			<f:if condition="{price}">
+				{price}
+			</f:if>
+		</li>
+	</ul>
+</div>

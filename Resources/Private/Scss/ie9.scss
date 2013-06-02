@@ -1,0 +1,9 @@
+@import "compass";
+@import "globalSass";
+
+// -------- Styles for IE9 and lower -------- //
+
+// -- global classes -- //
+.checklist ul {
+	border-left: 1px solid $grey12;
+}

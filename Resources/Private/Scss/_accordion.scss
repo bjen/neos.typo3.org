@@ -1,0 +1,55 @@
+.faq-accordion {
+	.accordion-heading {
+		border: 0 none;
+		font-size: 13px;
+		font-weight: bold;
+		background: url(../Images/border-line-gradient.png) no-repeat left bottom;
+		padding: 10px 0px 10px 0px;
+		cursor: pointer;
+
+		.icon-arrow-right {
+			float: left;
+			margin-right: 7px;
+		}
+
+		a {
+			color: $grey-muted;
+			text-decoration: none;
+			display: block;
+			line-height: 1.5em;
+		}
+
+		&.active {
+			background-image: none;
+
+			a {
+				color: $color-ci-orange-bright;
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			a {
+				color: $color-ci-orange-bright;
+			}
+		}
+	}
+
+	.accordion-body {
+		p {
+			font-size: 12px;
+			margin-left: 27px;
+		}
+	}
+
+	li {
+		margin-bottom: 0px;
+	}
+
+	li:last-child {
+		.accordion-heading {
+			background-image: none;
+		}
+	}
+}

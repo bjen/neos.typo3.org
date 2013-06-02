@@ -1,0 +1,40 @@
+<div class="row valign">
+	<div class="span6">
+		<div class="products">
+			<f:if condition="{left_product_link}">
+				<f:then>
+					<f:link.page pageUid="{left_product_link}" title="{left_product_link_title}" additionalAttributes='{class: "arrow"}'>
+						<img class="pull-left" src="uploads/fce/{left_product_image}" title="<f:format.raw>{left_product_title}</f:format.raw>" alt="<f:format.raw>{left_product_title}</f:format.raw>">
+						<span class="pull-left"><span class="icon-arrow-right-simple"></span><f:format.raw>{left_product_link_title}</f:format.raw></span>
+					</f:link.page>
+				</f:then>
+				<f:else>
+					<img class="pull-left" src="uploads/fce/{left_product_image}" title="<f:format.raw>{left_product_title}</f:format.raw>" alt="<f:format.raw>{left_product_title}</f:format.raw>">
+				</f:else>
+			</f:if>
+			<div class="description left">
+				<span><f:format.raw>{left_product_tooltip}</f:format.raw></span>
+				<div class="arrow left"></div>
+			</div>
+		</div>
+	</div>
+	<div class="span6">
+		<div class="products">
+			<f:if condition="{left_product_link}">
+				<f:then>
+					<f:link.page pageUid="{right_product_link}" title="{right_product_link_title}" additionalAttributes='{class: "arrow"}'>
+						<img class="pull-right" src="uploads/fce/{right_product_image}" title="<f:format.raw>{right_product_title}</f:format.raw>" alt="<f:format.raw>{right_product_title}</f:format.raw>">
+						<span class="pull-right"><span class="icon-arrow-right-simple"></span><f:format.raw>{right_product_link_title}</f:format.raw></span>
+					</f:link.page>
+				</f:then>
+				<f:else>
+					<img class="pull-right" src="uploads/fce/{right_product_image}" title="<f:format.raw>{right_product_title}</f:format.raw>" alt="<f:format.raw>{right_product_title}</f:format.raw>">
+				</f:else>
+			</f:if>
+			<div class="description right">
+				<span><f:format.raw>{right_product_tooltip}</f:format.raw></span>
+				<div class="arrow right"></div>
+			</div>
+		</div>
+	</div>
+</div>

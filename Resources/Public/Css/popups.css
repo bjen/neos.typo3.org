@@ -1,0 +1,13 @@
+/* line 5, ../../Private/Scss/popups.scss */
+.popup {
+  background: #ededed;
+}
+/* line 8, ../../Private/Scss/popups.scss */
+.popup .section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 14, ../../Private/Scss/popups.scss */
+.popup .tx-fluidrecommendation-pi1 input.form-submit {
+  margin-top: 20px;
+}

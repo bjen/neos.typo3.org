@@ -1,0 +1,116 @@
+@import "globalSass";
+
+.icon {
+	p {
+		color: $color-text-dark;
+	}
+
+	h1 {
+		border-bottom: 3px solid $grey11;
+		color: $color-ci-green;
+		font-size: 45px;
+		font-weight: normal;
+		line-height: 50px;
+		margin-bottom: 30px;
+		padding-right: 30px;
+		padding-bottom: 20px;
+	}
+
+	.span12 {
+		background-position: right 100px;
+		background-repeat: no-repeat;
+		padding-top: 100px;
+
+		.icon {
+			padding-right: 260px;
+		}
+	}
+}
+
+// ICONS (used instead of bootstrap's _sprite.scss!)
+// -----
+
+// All icons receive the styles of the <span> tag with a base class
+// of .icon and are then given a unique class to add width, height,
+// and background-position. Your resulting HTML will look like
+// <span class="icon-inbox"></i>.
+
+[class^="icon-"],
+[class*=" icon-"] {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	//@include ie7-restore-right-whitespace();
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url(../Images/icon_sprite.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.icon-arrow-right {
+	background-position: 0px 0px;
+}
+
+.icon-arrow-down {
+	background-position: -128px 0px;
+}
+
+.icon-info {
+	background-position: 0px -32px;
+	height: 22px;
+	width: 22px;
+	margin-top: -3px;
+	margin-right: 5px;
+}
+
+.green .icon-info {
+	background-position: -32px -32px;
+}
+
+.icon-arrow-right-simple {
+	background-position: -64px -36px;
+	margin-right: 5px;
+}
+
+.icon-subtitle-arrow-down {
+	width: 40px;
+	height:15px;
+	background-position: -98px -36px;
+}
+
+.green .icon-subtitle-arrow-down {
+	background-position: -150px -36px;
+}
+
+.icon-arrow-up {
+	position: relative;
+	background-position: -2px -64px;
+	height: 30px;
+	width: 30px;
+
+	&:active {
+		top: 1px;
+	}
+}
+
+
+//hover and interactive states
+:hover,
+:active,
+:focus {
+	> .icon-arrow-right {
+		background-position: -64px 0px;
+	}
+}
+
+//active states
+.active {
+	> .icon-arrow-right {
+		background-position: -32px 0px;
+	}
+
+	.icon-navarrow-right {
+		background-position: -160px 0;
+	}
+}

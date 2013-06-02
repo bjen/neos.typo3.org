@@ -1,0 +1,35 @@
+// ----------- Tables ----------- //
+table.contenttable {
+	border: 1px solid $grey12;
+	text-align: center;
+	margin-bottom: 25px;
+
+	td {
+		color: $grey6;
+		background: $brightest;
+		padding: 10px;
+		font-size: 12px;
+		border: 1px solid $grey12;
+	}
+
+	th {
+		background: lighten($grey12, 10%);
+		color: $grey5;
+		font-family: $font-ci-bold;
+		font-weight: normal;
+		padding: 15px 10px;
+		font-size: 14px;
+		border: 1px solid $grey12;
+		@include box-shadow(1px 0px 0px $grey1 inset);
+
+		&:first-child {
+			@include box-shadow(0px 0px 0px transparent inset);
+		}
+	}
+
+	tfoot {
+		td {
+			margin-bottom: 10px;
+		}
+	}
+}

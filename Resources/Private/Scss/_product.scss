@@ -1,0 +1,97 @@
+@import "globalSass";
+
+.section {
+	.products {
+
+		a {
+			@include clearfix;
+			margin-top: 10px;
+
+			&.arrow {
+				color: $color-ci-orange;
+
+				&:hover {
+					span {
+						text-decoration: none;
+					}
+				}
+
+				> span {
+					clear: both;
+					margin-top: 15px;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.description {
+			background-color: #EDEDED;
+			padding: 20px 25px;
+			position: absolute;
+			width: 55%;
+			font-family: $font-ci;
+			font-weight: normal;
+
+			span {
+				font-size: 18px;
+			}
+
+			&.left {
+				color: $color-ci-orange;
+				left: 185px;
+				top: 15px;
+			}
+
+			&.right {
+				bottom: 45px;
+				color: $color-ci-green;
+				right: 215px;
+			}
+
+			.arrow {
+				background-image: url(../Images/arrows_product-description.png);
+				background-repeat: no-repeat;
+				background-size: 32px 100%;
+				height: 100%;
+				position: absolute;
+				width: 16px;
+
+				&.left {
+					background-position: 0px 0px;
+					left: -16px;
+					top: 0px;
+				}
+
+				&.right {
+					background-position: -16px 0px;
+					bottom: 0px;
+					right: -16px;
+				}
+			}
+		}
+
+		a {
+			& + .description {
+				&.right {
+					bottom: 25px;
+				}
+			}
+		}
+	}
+
+	.valign {
+		.span6 {
+			display: table;
+			margin-bottom: 40px;
+
+			.products {
+				height: 270px;
+				position: relative;
+
+				img {
+					padding-top: 20px;
+				}
+			}
+		}
+	}
+}

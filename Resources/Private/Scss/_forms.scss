@@ -1,0 +1,239 @@
+// ------------------ Form elements ------------------ //
+
+// -- Field widths -- //
+.tx-felogin-pi1,
+.powermail_fieldwrap,
+.tx-fluidrecommendation-pi1 {
+	width: 100%;
+	display: block;
+	clear: both;
+
+	label {
+		width: 100%;
+		display: block;
+		margin-bottom: 2px;
+		color: $grey5;
+	}
+
+	input {
+		&.powermail_input,
+		&.input-text {
+			width: 100%;
+			height: 25px;
+			@include box-sizing(border-box);
+			@include border-radius(2px);
+			@include box-shadow(rgba($darkest, 0.1) 2px 2px 7px inset);
+			border-color: $brightest;
+			padding: 4px 17px 4px 17px;
+			margin-bottom: 13px;
+			color: $grey5;
+
+			&:hover,
+			&:focus {
+				@include box-shadow(rgba($darkest, 0.2) 2px 2px 7px inset);
+			}
+		}
+	}
+
+	textarea {
+		width: 100%;
+		@include box-sizing(border-box);
+		@include border-radius(2px);
+		@include box-shadow(rgba($darkest, 0.1) 2px 2px 7px inset);
+		border-color: $brightest;
+		padding: 17px 19px 17px 19px;
+		color: $grey5;
+
+		&:hover,
+		&:focus {
+			background-color: $brightest;
+			@include box-shadow(rgba($darkest, 0.2) 2px 2px 7px inset);
+		}
+	}
+}
+
+// Form Elements on green background
+.section.green {
+	label {
+		width: 100%;
+		display: block;
+		margin-bottom: 2px;
+		color: $brightest;
+	}
+
+	fieldset {
+		@include tranparent-box($fallbackBgColor: #9abd42);
+	}
+}
+
+.field-small-left {
+	width: 30%;
+	float: left;
+	clear: none;
+}
+
+.field-big-right {
+	width: 65%;
+	float: right;
+	clear: none;
+}
+
+.field-left,
+.field-half-left {
+	width: 48%;
+	float: left;
+	clear: none;
+}
+
+.field-right,
+.field-half-right {
+	width: 48%;
+	float: right;
+	clear: none;
+}
+
+.field-order {
+	clear: both;
+
+	label {
+		font-family: $font-ci;
+		color: $color-text;
+		float: left;
+		width: auto;
+		font-size: 17px;
+		margin-right: 5px;
+	}
+	input.powermail_field {
+		width: 70px;
+		border: 1px solid $grey12;
+		@include border-radius(0px);
+		margin-bottom: 30px;
+	}
+}
+
+.field-full {
+	width: 100%;
+	float: left;
+}
+
+.fieldset-left-half,
+.fieldset-right-half {
+	width: 50%;
+	float: left;
+	background: $grey8;
+	background: rgba($darkest, 0.1);
+	@include box-sizing(border-box);
+	padding: 5%;
+	min-height: 750px;
+	margin-bottom: -75px;
+}
+.fieldset-right-half {
+	float: right;
+}
+
+// -- Powermail specific styles -- //
+
+.tx-powermail {
+	h3 {
+		display: none;
+	}
+
+	legend {
+		line-height: 0px;
+		font-size: 0px;
+		color: transparent;
+		border: 0px;
+	}
+
+	.powermail_fieldwrap {
+		position: relative;
+
+
+		// Live Validation //
+		.formError {
+			left: auto !important;
+			right: -10px;
+			margin-top: -10px !important;
+			color: $brightest;
+			background: lighten($color-ci-orange-bright, 15%);
+			background: rgba($color-ci-orange-bright, 0.65);
+			border: 0px;
+			padding: 5px 10px;
+			@include border-radius(3px);
+		}
+	}
+
+	.powermail_fieldwrap_html {
+		h3 {
+			display: block;
+		}
+	}
+
+	.powermail_fieldwrap_check {
+		input {
+			float: left;
+		}
+
+		label {
+			color: $color-text;
+			float: right;
+			font-size: 12px;
+			width: 95%;
+		}
+
+		.formError {
+			background: $brightest;
+			padding: 10px;
+			right: 0px;
+		}
+	}
+
+	input {
+		&.powermail_submit {
+			@include button-orange;
+		}
+	}
+
+	.powermail_fieldwrap_textarea {
+		margin-top: 10px;
+		float: left;
+	}
+}
+
+// -- Recommendation specific styles -- //
+.tx-fluidrecommendation-pi1 {
+	legend {
+		display: none;
+	}
+
+	input {
+		&.form-submit {
+			@include button-orange;
+		}
+	}
+
+	textarea {
+		max-width: 600px;
+	}
+
+	.form_errors {
+		ul {
+			margin-bottom: 2em;
+		}
+		li {
+			padding-left: 0px;
+			font-size: 14px;
+		}
+	}
+}
+
+// -- felogin specific styles -- //
+.tx-felogin-pi1 {
+	.button {
+		@include button-orange;
+	}
+
+	legend {
+		display: none;
+	}
+}

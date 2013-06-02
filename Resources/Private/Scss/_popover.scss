@@ -1,0 +1,155 @@
+@import "globalSass";
+
+.popover {
+	background: transparent url(../Images/popover_sprite.png) no-repeat 0px 0px;
+	border: none;
+	@include border-radius(5px 5px 0px 0px);
+	padding: 0px;
+	width: 355px;
+	display: block !important;
+
+	&.top {
+		margin-top: -120px;
+
+		.arrow {
+			background: transparent url(../Images/popover_sprite.png) no-repeat -710px 0px;
+			border-width: 0px;
+			bottom: -50px;
+			height: 57px;
+			left: 0px !important;
+			margin-left: 0px !important;
+			width: 100%;
+
+			&:after {
+				border-width: 0px;
+				margin-left: 0px;
+			}
+		}
+	}
+
+	.popover-inner {
+		background: transparent url(../Images/popover_sprite.png) repeat-y -355px 0px;
+		margin-top: 6px;
+
+		// do not display headlines in popover
+
+		h3,
+		.popover-title {
+			display: none;
+		}
+
+		.popover-content {
+			padding: 20px 25px 5px 25px;
+
+			p {
+				color: $grey3;
+				font-size: 14px;
+				text-align: center;
+
+				a {
+					color: $color-ci-green;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+// -- Divided Stage (mieter) -- //
+#stage .stage-divided {
+	.popover {
+		display: block;
+		width: 365px;
+		@include box-shadow(0px 0px 0px transparent);
+		@include border-radius(0px);
+		background: url(../Images/popover-up.png) -400px top repeat-y;
+		position: relative;
+		top: auto;
+		left: auto;
+
+		&.bottom {
+			margin-top: -5px;
+			margin-bottom: 52px;
+
+			.arrow {
+				background: url(../Images/popover-up.png) left top no-repeat;
+				border-width: 0px;
+				top: -38px;
+				bottom: auto;
+				height: 38px;
+				left: 0px !important;
+				margin-left: 0px !important;
+				width: 100%;
+
+				&:after {
+					border-width: 0px;
+					margin-left: 0px;
+				}
+			}
+
+			h2 {
+				font-size: 24px;
+				font-family: $font-special;
+				font-weight: normal;
+				padding-bottom: 0px;
+				border: 0px;
+				text-align: center;
+			}
+
+			p {
+				margin-bottom: 0px;
+				font-family: $font-special;
+				font-weight: normal;
+				color: $grey2;
+
+				strong {
+					color: $color-ci-green;
+					font-family: $font-special-bold;
+					font-weight: normal;
+				}
+			}
+
+			.popover-inner {
+				background: transparent;
+			}
+		}
+
+		.popover-bottom {
+			background: url(../Images/popover-up.png) -800px top no-repeat;
+			position: absolute;
+			bottom: -52px;
+			left: 0px;
+			width: 100%;
+			height: 52px;
+		}
+	}
+
+	img {
+		height: auto;
+		margin-top: 0px;
+		max-width: 400px;
+		margin-left: 0px;
+	}
+
+	.c-1 {
+		padding-left: 7%;
+
+		.popover,
+		img {
+			float: left;
+		}
+	}
+
+	.c-2 {
+		padding-right: 7%;
+
+		.popover,
+		img {
+			float: right;
+		}
+	}
+}

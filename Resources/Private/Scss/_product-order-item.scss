@@ -1,0 +1,51 @@
+.product-order-header {
+	h3 {
+		font-size: 33px;
+		margin-bottom: 0.6em
+	}
+}
+
+.product-order-item {
+	border-top: 3px solid $grey11;
+	padding: 35px 0 0;
+
+	li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	.product-order-image {
+		border: 3px solid $grey11;
+		float: left;
+		width: 28%;
+	}
+
+	.product-order-description {
+		float: right;
+		width: 65%;
+
+		h4,
+		p {
+			padding-right: 40px;
+		}
+
+		h4 {
+			color: $color-ci-green;
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.product-order-article-no,
+	.product-order-price {
+		font-size: 24px;
+		font-family: $font-ci;
+		font-weight: normal;
+	}
+
+	.product-order-price {
+		color: $color-ci-green;
+	}
+}

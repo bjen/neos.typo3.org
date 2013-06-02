@@ -1,0 +1,39 @@
+@import "globalSass";
+
+.section {
+	&.teaser {
+		padding: 50px 0px;
+
+		.row {
+			&.left {
+				padding-right: 30px;
+			}
+
+			&.right {
+				padding-left: 30px;
+			}
+
+			//two col layout
+			.span6 {
+				h2 {
+					color: $color-ci-green;
+					font-size: 33px;
+					margin-bottom: 20px;
+					text-align: center;
+
+					a {
+						color: $color-ci-green;
+
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+
+		}
+		h4 {
+			color: $color-text;
+		}
+	}
+}

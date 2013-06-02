@@ -1,0 +1,11 @@
+// really small devices
+// hide anything that doesn't work so small
+@media (max-width: 360px) {
+	#stage {
+		.product,
+		.stage-divided .popover,
+		.stage-divided .c-2 {
+			display: none !important;
+		}
+	}
+}

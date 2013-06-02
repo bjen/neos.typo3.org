@@ -1,0 +1,5 @@
+http_path = "/"
+css_dir = "Public/Css"
+sass_dir = "Private/Scss"
+images_dir = "Public/Images"
+javascripts_dir = "Public/Scripts"

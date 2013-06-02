@@ -1,0 +1,44 @@
+// ---------- Checklist (paper design element) ----------- //
+.checklist {
+	ul {
+		background: $brightest url(../Images/teaser_bottom.gif) repeat-x bottom left;
+		border-top: 4px solid $grey12;
+		border-right: 1px solid $grey8;
+		@include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.20));
+		padding: 20px 15px 20px 15px;
+		font-family: $font-special;
+		font-weight: normal;
+
+		strong {
+			font-family: $font-special-bold;
+			font-weight: normal;
+		}
+
+		li {
+			background: transparent url(../Images/teaser_check.gif) no-repeat;
+			border-top: 1px solid $grey1;
+			color: $grey3;
+			font-size: 16px;
+			line-height: 1.5em;
+			min-height: 44px;
+			margin: 0px;
+			overflow: hidden;
+			padding-left: 55px;
+			text-align: left;
+
+			&:first-child {
+				border-top: none;
+			}
+
+			span {
+				padding: 10px 10px 10px 10px;
+				display: block;
+				border-left: 1px solid $grey1;
+			}
+		}
+	}
+
+	button {
+		@include button-orange;
+	}
+}

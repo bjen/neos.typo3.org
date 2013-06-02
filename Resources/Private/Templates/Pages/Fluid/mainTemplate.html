@@ -1,0 +1,32 @@
+<f:layout name="mainLayout" />
+
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>en:key</title>
+	</head>
+	<body>
+
+		<!-- Rendering BEGIN -->
+		<f:section name="content">
+			<div class="full-height">
+
+				<f:render partial="Pages/header" />
+
+				{content -> f:format.raw()}
+
+				<div class="push"><!--//--></div>
+			</div>
+
+
+
+			<footer>
+				<div id="footer">
+					<f:cObject typoscriptObjectPath="lib.footer" />
+				</div>
+			</footer>
+		</f:section>
+		<!-- Rendering END -->
+	</body>
+</html>

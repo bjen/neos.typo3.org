@@ -1,0 +1,4 @@
+<div class="headline-with-image" {f:if(condition: '{subheader}', then: 'style="{subheader}"')}>
+	<h1>{header}</h1>
+	<f:image src="uploads/pics/{image}" class="hidden-phone" alt="" width="{f:if(condition: '{imagewidth}', then: '{imagewidth}', else: '268'}" maxHeight="300" />
+</div>

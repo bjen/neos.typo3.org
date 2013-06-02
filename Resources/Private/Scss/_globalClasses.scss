@@ -1,0 +1,249 @@
+.hidden {
+	display: none;
+}
+
+a {
+    &.button {
+        @include button-orange;
+        text-decoration: none;
+        float: left;
+    }
+}
+
+p {
+    &.bigger-text {
+        font-size: 16px;
+    }
+
+    &.lower-width {
+        max-width: 80%;
+    }
+
+    &.no-margin-bottom {
+        margin-bottom: 0px;
+    }
+}
+
+button {
+	background: $color-ci-orange url(../Images/arrow_teaser.png) no-repeat center right;
+	border: none;
+	@include border-radius(22px);
+	@include box-shadow(1px 2px 0px rgba(0, 0, 0, 0.1));
+	color: $brightest;
+	font-size: 19px;
+	margin-top: 50px;
+	padding: 12px 40px 12px 15px;
+	text-transform: lowercase;
+}
+
+.button-ldp {
+	&.centered {
+		text-align: center;
+
+		.button {
+			float: none;
+		}
+	}
+}
+
+.orange {
+	color: $color-ci-orange;
+}
+
+.green {
+	color: $color-ci-green;
+}
+
+.section {
+	&.lower-padding-top {
+		padding-top: 50px;
+	}
+}
+
+.divider {
+	width: 100%;
+	height: 0px;
+	border-top: 3px solid $grey11;
+	margin: 15px 0px 15px 0;
+
+	hr {
+		display: none;
+	}
+}
+
+p sub,
+p sup {
+	margin-top: -10px;
+	display: block;
+	font-style: italic;
+	margin-bottom: 25px;
+	line-height: 1.2em;
+}
+
+// container gets additional styles, set in TYPO3-FCE
+.img-absolute-container {
+	overflow: hidden;
+	width: 100%;
+}
+
+.img-absolute {
+	position: absolute;
+	right: 2%;
+	bottom: -75px;
+	max-width: 200px;
+}
+
+.headline-with-image {
+	position: relative;
+	width: 100%;
+	margin-bottom: 45px;
+
+	h1 {
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		margin-bottom: 0px;
+	}
+
+	img {
+		position: absolute;
+		right: 0px;
+		bottom: 3px;
+	}
+}
+
+// Two columns
+.c-1,
+.c-2 {
+	position: relative;
+}
+
+.span6 {
+	&.c-1 {
+		padding-right: 25px;
+		@include box-sizing(border-box);
+	}
+	&.c-2 {
+		padding-left: 25px;
+		@include box-sizing(border-box);
+	}
+}
+
+.box-transparent-dark {
+	@include tranparent-box($rgbaBgcolor: $darkest, $fallbackBgColor: #759d11, $rgbaValue: 0.1);
+}
+
+.transparent-gradient {
+	.box-transparent-dark {
+		background: url(../Images/bg-transparent-gradient.png) 50% top no-repeat;
+		padding-top: 50px;
+
+		.row {
+			margin-left: 0px;
+
+			.c-1,
+			.c-2 {
+				margin-left: 0px;
+			}
+
+			.c-1 {
+				margin-right: -10px;
+				padding-right: 35px;
+			}
+
+			.c-2 {
+				margin-left: -10px;
+				padding-left: 35px;
+			}
+		}
+	}
+}
+
+.section {
+	.quote {
+
+		&.quote-border-top {
+			border-top: 3px solid #a8c76c; //fallback
+			border-top: 3px solid rgba($brightest, 0.4);
+			padding-top: 40px;
+			margin-top: -10px;
+		}
+
+		&.quote-pull-top {
+			margin-top: -120px;
+			position: relative;
+			z-index: 10;
+		}
+
+		blockquote {
+			padding: 25px 15px 25px 15px;
+			border: 0px;
+			margin: 0px;
+			font-family: $font-hand;
+
+			p {
+				font-size: 54px;
+				color: darken($color-ci-green-dark, 10%);
+				line-height: 1em;
+				text-align: center;
+
+				strong {
+					font-weight: normal;
+					color: #C0E96F;
+				}
+			}
+		}
+	}
+
+	&.green {
+		.quote {
+			blockquote {
+				@include rotate(-0.5deg);
+
+				p {
+					color: darken($color-ci-green-dark, 10%);
+					text-shadow: 0px 0px 0px transparent;
+				}
+			}
+		}
+
+		.divider {
+			border-color: rgba($brightest, 0.4);
+		}
+
+		p sub,
+		p sup {
+			@include text-shadow(0px 0px 0px transparent);
+			color: $brightest;
+			color: rgba($brightest, 0.8);
+		}
+	}
+
+	&.white {
+		.quote {
+			blockquote {
+				p {
+					color: $color-ci-green;
+				}
+			}
+		}
+		a {
+			&.arrow-right-simple {
+				color: $color-ci-orange;
+			}
+		}
+	}
+
+	// smaller font within smaller grid width
+	.span8 {
+		.quote {
+			blockquote {
+				p {
+					font-size: 34px;
+					line-height: 1.3em;
+				}
+			}
+		}
+	}
+}

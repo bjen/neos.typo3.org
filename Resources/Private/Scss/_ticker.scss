@@ -1,0 +1,111 @@
+#ticker {
+	position: absolute;
+	top: 0px;
+	right: 300px;
+
+	.countdown {
+		line-height: 30px;
+		font-size: 16px;
+
+		small {
+			font-size: 13px;
+		}
+
+		.counter,
+		.divider {
+			font-size: 21px;
+			line-height: 27px;
+			border: 0 none;
+		}
+
+		.counter {
+			color: $brightest;
+			background: url(../Images/enkey-ticker-countdown-bg.png) repeat-x 0px 0px;
+			letter-spacing: 7px;
+			padding-left: 5px;
+			display: inline-block;
+			width: 35px;
+			height: 25px;
+			@include text-shadow(rgba($darkest, 0.7) 0px 0px 4px);
+
+			&.long {
+				width: 54px;
+			}
+		}
+	}
+
+	h4 {
+		color: $color-ci-orange;
+	}
+
+	&.small {
+		border-bottom: 5px solid $color-ci-green;
+		background: $grey0;
+
+		> div {
+			padding: 10px 10px 5px 10px;
+			border-left: 1px solid #dfdfdf;
+			border-right: 1px solid #dfdfdf;
+			width: auto;
+		}
+
+		h4 {
+			font-size: 16px;
+			margin-right: 8px;
+			margin-bottom: 0px;
+		}
+
+		span.hours {
+			margin-left: 5px;
+		}
+
+		h4,
+		.countdown {
+			display: inline;
+		}
+
+		br {
+			display: none;
+		}
+	}
+
+	&.large {
+		top: 10px;
+		right: 0px;
+		background: $brightest;
+		border-bottom: 6px solid $color-ci-green;
+		@include box-shadow(rgba($darkest, 0.33) 0px 0px 5px);
+		padding: 20px 15px 10px 20px;
+		width: 320px;
+		z-index: 10;
+
+		.span6 {
+			margin: 0;
+			padding: 0;
+
+			h4 {
+				margin-top: 0px;
+				margin-bottom: 5px;
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 12px;
+			}
+
+			&.left {
+				width: 45%;
+			}
+
+			&.right {
+				float: right;
+				width: 54%;
+
+				h4 {
+					color: $color-ci-green;
+					line-height: 1.3em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@media (min-width: 1200px) {
+
+	// -- basic content styles & global classes -- //
+	h4 {
+		&.centered {
+			padding-right: 3em;
+			padding-left: 3em;
+		}
+	}
+
+	.section {
+		p {
+			&.lower-width {
+				max-width: 70%;
+			}
+		}
+	}
+
+	// pull stage contents outside their container (looks cooler)
+	#stage {
+		.margin-left {
+			margin-left: -80px;
+			padding-right: 80px;
+		}
+
+		img {
+			margin-left: 0px;
+		}
+
+		.overlay {
+			right: -40px;
+		}
+	}
+
+	// -- news -- //
+	.section.news {
+		.row {
+			.news {
+				.news-img-wrap {
+					img {
+						max-width: 140px;
+					}
+				}
+			}
+		}
+	}
+
+	//bigger images {
+	.img-absolute {
+		max-width: 280px;
+	}
+}

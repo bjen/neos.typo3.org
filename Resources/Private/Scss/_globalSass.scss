@@ -1,0 +1,92 @@
+// greys
+$dark-grey: #3f3f3f;
+$grey0: #EDEDED;  // section background
+$grey9: #F0F1F2;  // navigation background
+$grey1: #EBEAE5;  // border color
+$grey11: #DCDDDE; // border news in content area
+$grey8: #D6D5D0;  // border color
+$grey12: #C4C4C4; // teaser border top
+$grey2: #979899;  // footer light background
+$grey6: #888989;  // footer border navigation
+$grey7: #7B7C7C;  // footer social media background
+$grey3: #747576;  // footer dark background
+$grey4: #636363;  // standard text
+$grey10: #5F6061; // footer metanav border
+$grey5: $dark-grey;  // footer dark text
+
+$grey-muted: #8F8F8F;
+$grey-lightest: #FAFAFA;
+
+// colors
+$color-ci-green: #7fAD21;
+$color-ci-green-dark: #63871A;
+$color-ci-green-lightest: #D8E7BA;
+$color-ci-green-light: #93C235;
+$color-ci-orange: #ff8700;
+$color-ci-orange-bright: $color-ci-orange;
+
+$color-link: $color-ci-green;
+$color-link-hfa: $color-ci-green;
+$color-text: $grey6;
+$color-text-dark: $grey4;
+
+$brightest: #FFFFFF;
+$darkest: #000000;
+
+// font-families
+$font1: Arial, sans-serif;
+$font2: Georgia, "Times New Roman", Times, serif;
+$font3: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+
+$font-ci: 'share-regularregular', sans-serif;
+$font-ci-bold: 'share-boldregular', sans-serif;
+$font-special: 'share-regularregular', serif;
+$font-special-bold: 'share-boldregular', serif;
+$font-hand: 'share-regularregular', cursive;
+
+$font-size-def: 18px;
+
+// widths
+$page-width: 960px;
+
+// heights
+//$header-height: 113px;
+$stage-height: 330px;
+$footer-height: 160px;
+
+// border
+$border-std: 1px solid $grey8;
+$border-soft: 1px solid $grey12;
+
+// Mixins
+
+@mixin button-orange {
+	background: $color-ci-orange url(../Images/arrow_teaser.png) no-repeat center right;
+	border: none;
+	@include border-radius(22px);
+	@include box-shadow(1px 2px 0px rgba(0, 0, 0, 0.1));
+	color: $brightest;
+	font-size: 19px;
+	margin-top: 50px;
+	padding: 12px 50px 12px 25px;
+	text-transform: lowercase;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken($color-ci-orange, 4%);
+	}
+
+	&:focus {
+		@include box-shadow(1px 2px 0px rgba(0, 0, 0, 0.01));
+	}
+}
+
+@mixin tranparent-box($rgbaBgcolor: $brightest, $fallbackBgColor: $grey-lightest, $rgbaValue: 0.2) {
+	position: relative;
+	margin: 0;
+	padding: 20px;
+	overflow: hidden;
+	background-color: $fallbackBgColor; //fallback if rgba is not supported
+	background-color: rgba($rgbaBgcolor,$rgbaValue);
+}

@@ -1,0 +1,146 @@
+@import "globalSass";
+
+.section.section-stage {
+	padding-bottom: 0px;
+
+	p {
+		color: $grey6;
+	}
+}
+#stage {
+	position: relative;
+	margin-top: -50px;
+
+	img {
+		height: 500px;
+		margin-top: -50px;
+		margin-left: -215px;
+	}
+
+	.product {
+		bottom: -70px;
+		position: absolute;
+		z-index: 200;
+
+		&.left {
+			left: 235px;
+		}
+
+		&.right {
+			left: 580px;
+			width: 217px; //stop weird resizing of right product on lower resolutions (why is this?)
+		}
+
+		&.animation {
+			background: transparent url(../Images/product-animation.png) no-repeat top left;
+			bottom: -65px;
+			height: 39px;
+			left: 385px;
+			width: 262px;
+
+			.wifi-animation {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				li {
+					display: block;
+					float: left;
+					background: url(../Images/wifi_animation_sprite.png) no-repeat 0px 2px;
+					height: 14px;
+					width: 12px;
+					margin: 0px 3px 0px 0px;
+					padding: 0px;
+
+					&.odd {
+						background-position: 0px -12px;
+					}
+
+					&.active {
+						background-position: 0px -28px;
+					}
+				}
+			}
+		}
+	}
+
+	.overlay {
+		background-color: rgba($brightest, 0.8);
+		bottom: 0px;
+		max-height: 90%;
+		max-width: 50%;
+		overflow: hidden;
+		padding: 30px 40px 25px 40px;
+		position: absolute;
+		right: 0px; //pulled outside only >1200px
+
+		h1 {
+			font-size: 38px;
+			margin-bottom: 0.2em;
+		}
+
+		h2 {
+			font-size: 24px;
+			color: lighten($grey5, 10%);
+			border-width: 1px;
+		}
+
+		p + h2 {
+			color: $color-ci-orange;
+			border: 0px;
+		}
+	}
+}
+
+// Home page stage //
+.home {
+	.section.section-stage {
+		padding-top: 50px;
+	}
+
+	#stage {
+		height: $stage-height;
+
+		.stage-img {
+			height: $stage-height;
+			overflow: hidden;
+			position: relative;
+			margin-left: -40px;
+
+			img {
+				position: absolute;
+				z-index: 0;
+				left: -200px;
+				top: -100px;
+			}
+		}
+
+		img {
+			height: auto;
+			margin: 0px;
+			padding: 0px;
+		}
+	}
+
+	.section.green {
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+// Mieter Landingpage stage //
+#stage {
+	.stage-arrow {
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -173px;
+		width: 347px;
+		height: 77px;
+		background: url(../Images/stage-arrow-green.png) left top no-repeat;
+	}
+	.span6 {
+		margin-top: 50px;
+	}
+}

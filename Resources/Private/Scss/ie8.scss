@@ -1,0 +1,80 @@
+@import "compass";
+@import "globalSass";
+
+// -------- Styles for IE8 and lower -------- //
+
+// -- Navigation -- //
+#header {
+	ul.nav {
+		ul {
+			li {
+				border-right: 1px solid $grey8;
+				border-left: 1px solid $grey8;
+			}
+		}
+	}
+}
+
+// -- Global classes -- //
+
+.grey {
+	.box-transparent-dark {
+		background: $grey11;
+	}
+}
+
+.white {
+	.box-transparent-dark {
+		background: $grey12;
+	}
+}
+
+#stage {
+	.overlay {
+		background: $brightest;
+	}
+}
+// -- News -- //
+
+.section.news {
+	.row {
+		padding-bottom: 0px;
+
+		.news {
+			.news-img-wrap {
+				width: 146px;
+			}
+
+			.long-list {
+				.news-img-wrap {
+					width: 100%;
+				}
+
+				.row {
+					padding-bottom: 50px;
+				}
+			}
+		}
+	}
+
+	.section-subtitle-container {
+		height: 34px;
+	}
+}
+
+// -- Products -- //
+
+.section {
+	.products {
+		.description {
+			.arrow {
+				&.left {
+					background-position: 0px 50%;
+				}
+				&.right {
+					background-position: -16px 50%;
+				}
+			}
+		}
+	}
+}

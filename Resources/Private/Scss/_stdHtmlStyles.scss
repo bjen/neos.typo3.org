@@ -1,0 +1,345 @@
+/**
+ * Ueberschriften --------------------------------------------------------------------------
+**/
+
+
+/* Ueberschriften fuer Inhalte */
+h1,h2,h3,h4,h5,h6 {
+	font-family: $font-ci;
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
+	line-height: 1.3em;
+	color: inherit;
+
+	strong {
+		font-weight: normal;
+		font-family: $font-ci-bold;
+	}
+}
+
+h1 {
+	font-size: 45px;
+	padding-bottom: 0.5em;
+}
+h2 {
+	font-size: 45px;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.7em;
+}
+h3 {
+	font-size: 33px;
+	margin-bottom: 0.8em;
+}
+h4 {
+	font-size: 24px;
+	line-height: 1.5em;
+}
+h5 {
+	font-size: 20px;
+	font-weight: 400;
+}
+h6 {
+	font-size: 20px;
+}
+
+
+
+
+/**
+ * Listen ----------------------------------------------------------------------------------
+**/
+
+ul, ol, dl {
+	line-height:1.5em;
+	margin:0 0 1em 1em;
+	padding:0px;
+}
+
+ul {
+	list-style-type:none; margin:0 0 1em 0em;
+}
+ul ul {
+	list-style-type:none; margin-bottom:0;
+}
+
+li {
+	margin-left:0.8em;
+	margin-bottom: 0.5em;
+	line-height:1.3em;
+}
+
+ul li {
+	margin-left: 0em;
+	padding-left: 1em;
+}
+
+ol,
+ol li, {
+	list-style-type:decimal;
+}
+ol ol {
+	list-style-type:lower-latin;
+	margin-bottom:0;
+}
+ol ol ol {
+	list-style-type:upper-roman;
+	margin-bottom:0;
+}
+
+
+dt { font-weight:bold; }
+dd { margin:0 0 1em 0.8em; }
+
+
+/**
+ * Allgemeine Textauszeichnung --------------------------------------------------------------
+**/
+
+p {
+	font-size: $font-size-def;
+	line-height: 1.3em;
+	margin: 0 0 1.3em 0;
+}
+
+img {
+	border:0;
+}
+
+blockquote, cite, q {
+	font-family: $font2;
+	font-style:italic;
+}
+
+blockquote { margin:0 0 1em 1.6em; }
+
+strong,
+b {
+	font-weight: bold;
+}
+em,
+i {
+	font-style: italic;
+}
+
+big {
+	font-size: 22px;
+}
+small {
+	font-size: 12px;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+pre {
+	line-height: 1.5em;
+	margin: 0 0 1em 0;
+}
+pre,
+code,
+kbd,
+tt,
+samp,
+var {
+	font-size: $font-size-def;
+}
+pre,
+code {}
+kbd,
+samp,
+var,
+tt {
+	font-weight:bold;
+}
+
+var,
+dfn {
+	font-style:italic;
+}
+
+acronym,
+abbr {
+	border-bottom:1px #aaa dotted;
+	font-variant:small-caps;
+	letter-spacing:.07em;
+	cursor:help;
+}
+
+sub,
+sup { font-size: 11px; line-height:0px; }
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
+
+hr {
+	color:grey;
+	background:grey;
+	margin:0;
+	padding:0px;
+	border:0;
+	border: 0px;
+	height: 1px;
+}
+
+pre,
+code,
+kbd,
+samp,
+var,
+tt {
+	font-family:$font3;
+}
+
+
+/**
+ * Links ------------------------------------------------------------------------------------
+**/
+
+a {
+	color: $color-link;
+	background: transparent;
+	text-decoration: underline;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: $color-link-hfa;
+	text-decoration: none;
+}
+
+
+/**
+ * Tabellen --------------------------------------------------------------------------------
+**/
+
+table {
+	width: 100%;
+	border-collapse:collapse;
+	margin-bottom:0.5em;
+	border-top:2px grey solid;
+	border-bottom:2px grey solid;
+	caption-side: bottom;
+}
+
+table caption {
+	font-size: 90%;
+	margin-top: 0.3em;
+}
+
+th,
+td {
+	padding:0.5em;
+	font-size: 93%;
+	vertical-align: top;
+}
+
+thead th {
+	font-weight: bold;
+	border-bottom:2px grey solid;
+}
+
+tbody th {
+	border-bottom:1px solid grey;
+	text-align:left;
+}
+tbody td {
+	border-bottom: 1px solid grey;
+}
+
+tfoot {
+	th,
+	tr {
+		font-weight: bold;
+	}
+}
+
+table p {margin: 0;}
+
+
+
+
+/**
+ * Formulare --------------------------------------------------------------------------------
+**/
+
+fieldset {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+legend {
+		display: block;
+		height: 0;
+		margin: 0;
+		padding: 3px;
+		width: auto;
+}
+
+fieldset fieldset legend {
+	position: absolute;
+	left: 0;
+	padding: 0;
+	margin: 0;
+}
+
+label{
+	display: inline;
+	white-space:normal;
+	cursor: pointer;
+}
+
+
+select {
+	border:$border-std;
+	-moz-box-shadow:inset 0px 0px 7px -7px #000000;
+	-webkit-box-shadow:inset 0px 0px 7px -7px #000000;
+	box-shadow:inset 0px 0px 7px -7px #000000;
+}
+
+input,
+textarea {
+	border:$border-std;
+	padding: 5px;
+	-moz-box-shadow:inset 0px 0px 7px -7px #000000;
+	-webkit-box-shadow:inset 0px 0px 7px -7px #000000;
+	box-shadow:inset 0px 0px 7px -7px #000000;
+}
+input[type=radio],
+input[type=checkbox] {
+	border: 0;
+	background: transparent;
+	padding-top: 0;
+
+	&:hover {
+		border: none;
+	}
+}
+
+textarea:focus,
+textarea:hover{
+	background: transparent;
+	border:$border-std;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+	border:none;
+}
+
+
+/**
+ * HTML5 - Anpassung des visuellen Formatmodells auf Blockelemente --------------------------
+**/
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary {
+	display:block;
+}

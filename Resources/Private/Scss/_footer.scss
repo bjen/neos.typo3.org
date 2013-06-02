@@ -1,0 +1,170 @@
+@import "globalSass";
+
+#footer {
+	background-color: $grey2;
+	height: $footer-height;
+	@include box-shadow(0px 3px 3px rgba($darkest, 0.1) inset);
+
+	.section {
+		background-color: transparent;
+		padding: 20px 0px;
+
+		ul {
+			&.nav {
+				width: 410px;
+
+				li {
+					border-bottom: 2px solid $grey6;
+					float: left;
+					margin: 0px 5% 0px 0px;
+					padding: 0px;
+					width: 45%;
+
+					a {
+						background: transparent;
+						color: $brightest;
+						font-size: 13px;
+						padding: 5px 0px;
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+
+					&.no-border {
+						border-bottom: none;
+					}
+
+					&.active {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&.metanav {
+				li {
+					border-left: 1px solid $grey10;
+					padding: 0px 12px;
+
+					&:first-child {
+						border-left: none;
+					}
+
+					&:last-child {
+						padding-right: 0px;
+					}
+
+					&.active {
+						a {
+							text-decoration: none;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+
+			&.social-media {
+				margin: 0px;
+
+				li {
+					height: 38px;
+					padding: 0px;
+					overflow: hidden;
+
+					a {
+						background: transparent url(../Images/sprite_social-media.png) no-repeat;
+						color: $brightest;
+						display: block;
+						font-size: 11px;
+						height: 100%;
+						line-height: 38px;
+						text-decoration: none;
+						text-indent: -9999px;
+						width: 38px;
+						@include transition-property(width, background-color);
+						@include transition-duration(0.7s);
+						@include transition-timing-function(ease-in-out);
+						@include border-radius(19px);
+
+						&.rss {
+							background-position: 0px 0px;
+
+							&:hover {
+								background-position: 0px -38px;
+							}
+						}
+
+						&.active,
+						&:hover {
+							background-color: $grey7;
+							@include border-radius(19px);
+							text-indent: 45px;
+							width: 100%;
+							@include transition-property(width);
+							@include transition-duration(0.7s);
+							@include transition-timing-function(ease-in-out);
+						}
+					}
+
+					&:last-child {
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+
+		&.dark {
+			background-color: $grey3;
+			padding: 10px 0px 10px 0px;
+
+			p {
+				color: $grey5;
+				margin: 0px;
+				padding: 0px;
+				font-size: 12px;
+				line-height: 1.6em;
+			}
+
+			ul {
+				margin: 0px;
+				padding: 0px;
+				font-size: 12px;
+
+				li {
+					float: left;
+					margin-bottom: 0px;
+					line-height: 1.6em;
+
+					a {
+						color: $grey5;
+
+						&:hover {
+							color: $grey5;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+
+		.row {
+			display: table;
+
+			&.dark {
+				display: block;
+			}
+
+			[class*="span"] {
+				&.valign {
+					@include clearfix;
+					display: table-cell;
+					float: none !important;
+					height: $footer-height - 75;
+					padding-left: 30px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

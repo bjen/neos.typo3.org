@@ -1,0 +1,18 @@
+@import "compass";
+@import "globalSass";
+// ------------ Styles for popup windows like lightboxes ------------ //
+
+.popup {
+	background: $grey0;
+
+	.section {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.tx-fluidrecommendation-pi1 {
+		input.form-submit {
+			margin-top: 20px;
+		}
+	}
+}

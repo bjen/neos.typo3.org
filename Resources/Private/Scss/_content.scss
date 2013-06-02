@@ -1,0 +1,165 @@
+h1 {
+	color: $dark-grey;
+	margin-bottom: 1em;
+
+	& + h2 {
+		color: $color-ci-orange;
+		font-size: 33px;
+	}
+}
+
+h2 {
+	color: $dark-grey;
+
+	&.no-border {
+		border: 0px;
+		padding-bottom: 0px;
+	}
+
+	&.headline-smaller {
+		font-size: 33px;
+	}
+}
+
+h3 {
+	color: $color-ci-orange;
+}
+
+h4 {
+	&.centered {
+		text-align: center;
+		border-bottom: 3px solid $grey11;
+		padding-bottom: 1.5em;
+		padding-top: 1em;
+		margin-bottom: 2.4em;
+
+		strong {
+			display: block;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	&.with-border {
+		border-bottom: 3px solid $brightest;
+		padding-bottom: 0.3em;
+		margin-bottom: 0.8em;
+	}
+}
+
+p {
+	color: $color-text;
+}
+
+.section {
+	position: relative;
+
+	.section-subtitle-container {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		background-color: #eaeced; //fallback, close to the color of arrow-icon
+		@include background(linear-gradient(color-stops(rgba(255,255,255,0.05), rgba(0,0,0,0.05))));
+		color: $grey2;
+		font-size: 15px;
+		line-height: 2.25;
+
+		.section-subtitle {
+			position: relative;
+			font-family: $font-ci;
+			font-weight: normal;
+
+			.icon-subtitle-arrow-down {
+				position: absolute;
+				left: 40px;
+				bottom: -11px;
+			}
+		}
+	}
+
+	&.white {
+		.section-subtitle-container {
+			background-color: #f2f2f2; //fallback, close to the color of arrow-icon
+			@include background(linear-gradient(color-stops(rgba(255,255,255,0.05), rgba(0,0,0,0.05))));
+		}
+	}
+
+	&.green {
+		h1 {
+			@include text-shadow(3px 3px 0px rgba(0, 0, 0, 0.15));
+			border-bottom: 3px solid $brightest;
+			color: $brightest;
+		}
+
+		h2 {
+			border-color: $brightest;
+			color: $brightest;
+			@include text-shadow(1px 2px 0px rgba(0, 0, 0, 0.15));
+		}
+
+		.hgroup {
+			h1 {
+				border: 0px;
+				margin-bottom: 0px;
+
+				& + h2 {
+					border-bottom: 3px solid $brightest;
+				}
+			}
+		}
+
+		h3 {
+			border-color: $brightest;
+			color: $brightest;
+			@include text-shadow(1px 2px 0px rgba(0, 0, 0, 0.15));
+		}
+
+		h4 {
+			@include text-shadow(1px 2px 0px rgba(0, 0, 0, 0.15));
+		}
+
+		p {
+			color: $brightest;
+		}
+
+		a {
+			color: $brightest;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $color-ci-green-lightest; //fallback
+				color: rgba($brightest, 0.7);
+			}
+		}
+
+		.section-subtitle-container {
+			background-image: none;
+			background-color: #8db32c; //fallback
+			background-color: rgba(255,255,255,0.11);
+			color: #d8f296;
+		}
+	}
+
+	&.grey-middle {
+		h2 {
+			border-color: $grey8;
+		}
+		p {
+			color: $grey5;
+		}
+
+		a {
+			color: $color-ci-orange;
+		}
+	}
+
+	h2 {
+		&.orange {
+			color: $color-ci-orange;
+		}
+	}
+
+	&.no-border {
+		border-top: 0px;
+	}
+}

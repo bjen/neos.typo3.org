@@ -1,0 +1,174 @@
+@media (min-width: 768px) and (max-width: 979px) {
+
+	// -- overall changes -- //
+
+	// make two cols more condensed
+	.span6 {
+		&.c-1 {
+			padding-right: 5px;
+		}
+		&.c-2 {
+			padding-left: 5px;
+		}
+	}
+	.section.news {
+		.row .news{
+			&.left{
+				padding-right: 10px;
+			}
+			&.right {
+				padding-left: 10px;
+			}
+		}
+	}
+	.section .dynamic-columns {
+		@include column-gap(40px);
+	}
+
+	// respace four-cols to 2x2 cols
+	.four-cols {
+		.span3 {
+			width: 47%;
+			float: left;
+		}
+
+		.c-1,
+		.c-2 {
+			margin-bottom: 30px;
+		}
+	}
+
+	// -- element specifix changes -- //
+
+	// make stage work on lower resolution
+	.home {
+		.section.teaser.border-top {
+			padding-top: 80px;
+		}
+	}
+	.home #stage,
+	#stage {
+		.stage-img {
+			overflow: visible;
+		}
+		// -25px on left-positioning of product-images
+		.product {
+			&.left {
+				left: 70px;
+			}
+
+			&.right {
+				left: 425px;
+			}
+
+			&.animation {
+				background: transparent url(../Images/product-animation.png) no-repeat top left;
+				bottom: -65px;
+				height: 39px;
+				left: 225px;
+				width: 262px;
+			}
+		}
+
+		// give .overlay more width, so there's enough room for its content
+		.overlay {
+			//position: relative;
+			//width: 100%;
+			max-width: 80%;
+		}
+
+		//divided-stage optimizing (make it narrower)
+		.stage-divided {
+			img {
+				max-width: 100%;
+			}
+			.c-1 {
+				img {
+					margin-left: -20px;
+				}
+				.popover {
+					margin-left: -70px;
+				}
+			}
+			.c-2 {
+				img {
+					margin-right: -30px;
+				}
+				.popover {
+					float: left;
+				}
+			}
+		}
+	}
+
+
+	// more condensed testimonials
+	.section {
+		.testimonials {
+			padding: 15px !important;
+
+			blockquote {
+				p {
+					font-size:20px;
+					line-height: 1.2;
+				}
+				footer {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	// disable .pull-top on quotes
+	.section .quote.quote-pull-top {
+		margin-top: 0px;
+	}
+
+	//enkey-animation optimieren: 2x2 grid
+	.enkey-animation-container {
+		.enkey-animation-slide.span3 {
+			width: 47%;
+			float: left;
+			margin:1.5% !important;
+
+			&:nth-child(n+3) {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+	// global classes
+	p {
+		&.lower-width {
+			max-width: 100%;
+		}
+	}
+
+	.phone-full-width {
+		.span6 {
+			width: 100%;
+		}
+
+		.c-1 {
+			margin-bottom: 25px;
+		}
+	}
+
+	// ----------- ticker ----------- //
+	#ticker {
+		&.small {
+			right: 250px;
+		}
+
+		&.large {
+			width: 150px;
+
+			.span6.left {
+				width: auto;
+			}
+			.span6.right {
+				display: none;
+			}
+		}
+	}
+}

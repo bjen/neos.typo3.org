@@ -1,0 +1,176 @@
+@media (max-width: 480px) {
+
+//
+// remember! <786 (_media-767.scss) is working here as well!
+// ---------------------------------------------------------
+
+
+//
+// overall changes
+// ---------------
+	.section.menu.cloned {
+		display: none;
+	}
+	nav.cloned-hidden {
+		display: block;
+	}
+
+
+
+//
+// element specifix changes
+// ------------------------
+
+	//make stage work on mobiles
+	.home #stage {
+		height: 300px;
+	}
+
+	.home #stage,
+	#stage {
+		.stage-img img {
+			top: -30px;
+			left: -30px;
+			min-width: 500px;
+			margin-left: -100px;
+		}
+		// improving positioning from <768
+		.product {
+			bottom: -40px;
+
+			&.left {
+				width: 20%;
+				left: 0px;
+			}
+
+			&.right {
+				width: 20%;
+				left: 12%;
+				margin-left: 255px;
+			}
+
+			&.animation {
+				background: transparent url(../Images/product-animation.png) no-repeat top left;
+				bottom: -35px;
+				height: 39px;
+				left: 17%;
+				width: 262px;
+			}
+		}
+
+		.margin-left {
+			img {
+				margin-left: -25%;
+				min-width:250px;
+			}
+		}
+
+		//pull stage-divided to the left to make more room for .popovers
+		.stage-divided {
+			margin-left: -20px;
+		}
+	}
+
+	//decrease font-size in checklist (to make it work on really small devices)
+	.checklist ul li {
+		font-size: 14px;
+	}
+
+	//enkey-animation optimieren: 1x1 grid
+	//and no animation at all!
+	.enkey-animation-container.activated,
+	.enkey-animation-container {
+		.enkey-animation-slide.span3 {
+			width: 100%;
+			float: none;
+			margin:0px 0px 30px 0px !important;
+
+			img {
+				width: 97%;
+				margin: 0px auto;
+				@include box-shadow(black 0px 10px 10px -10px);
+				@include opacity(1);
+			}
+			p {
+				bottom: 10px;
+			}
+		}
+	}
+
+	//disable cols on footer nav
+	#footer .section ul.nav {
+		width: 100%;
+
+		li {
+			width: 100%;
+
+			&.no-border {
+				border-bottom: 2px solid $grey6;
+			}
+		}
+	}
+
+	// -- forms -- //
+	.field-small-left,
+	.field-big-right {
+		width: 100%;
+	}
+
+	// -- content -- //
+	table.contenttable {
+		td,
+		th {
+			padding: 5px 3px;
+		}
+	}
+
+	// -- Internal area -- //
+	.product-order-item {
+		.product-order-description {
+			p,
+			h4 {
+				padding-right: 0px;
+			}
+		}
+	}
+	.csc-textpic {
+		&.csc-textpic-intext-left-nowrap {
+			.csc-textpic-imagewrap {
+				display: none;
+			}
+
+			.csc-textpic-text {
+				margin-left: 0px;
+			}
+		}
+	}
+
+// ----------- ticker ----------- //
+	#ticker {
+		&.small {
+			display: none;
+		}
+		&.large {
+			position: static;
+			text-align: center;
+			width: auto;
+			margin-bottom: -10px;
+
+			h4 {
+				font-size: 16px;
+				margin: 0 10px 0 0;
+			}
+
+			h4,
+			.countdown {
+				display: inline;
+			}
+		}
+	}
+
+	#metanav {
+		> .span12 {
+			margin-top: 0px;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/* line 10, ../../Private/Scss/ie8.scss */
+#header ul.nav ul li {
+  border-right: 1px solid #d6d5d0;
+  border-left: 1px solid #d6d5d0;
+}
+
+/* line 21, ../../Private/Scss/ie8.scss */
+.grey .box-transparent-dark {
+  background: #dcddde;
+}
+
+/* line 27, ../../Private/Scss/ie8.scss */
+.white .box-transparent-dark {
+  background: #c4c4c4;
+}
+
+/* line 33, ../../Private/Scss/ie8.scss */
+#stage .overlay {
+  background: white;
+}
+
+/* line 40, ../../Private/Scss/ie8.scss */
+.section.news .row {
+  padding-bottom: 0px;
+}
+/* line 44, ../../Private/Scss/ie8.scss */
+.section.news .row .news .news-img-wrap {
+  width: 146px;
+}
+/* line 49, ../../Private/Scss/ie8.scss */
+.section.news .row .news .long-list .news-img-wrap {
+  width: 100%;
+}
+/* line 53, ../../Private/Scss/ie8.scss */
+.section.news .row .news .long-list .row {
+  padding-bottom: 50px;
+}
+/* line 60, ../../Private/Scss/ie8.scss */
+.section.news .section-subtitle-container {
+  height: 34px;
+}
+
+/* line 71, ../../Private/Scss/ie8.scss */
+.section .products .description .arrow.left {
+  background-position: 0px 50%;
+}
+/* line 74, ../../Private/Scss/ie8.scss */
+.section .products .description .arrow.right {
+  background-position: -16px 50%;
+}
